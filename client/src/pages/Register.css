@@ -1,0 +1,177 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f8fc;
+  padding: 50px 20px;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 42px;
+  box-shadow: 0 20px 60px rgba(30, 41, 59, 0.08);
+}
+
+.register-header {
+  margin-bottom: 28px;
+}
+
+.register-brand {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+  border-radius: 14px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.register-header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.register-header p {
+  color: #737c8c;
+  font-size: 14px;
+}
+
+.verification-banner {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  background: #f0fdf4;
+  border: 1px solid #d7f3df;
+  border-radius: 12px;
+  margin-bottom: 28px;
+}
+
+.verification-banner > span {
+  font-size: 21px;
+}
+
+.verification-banner strong {
+  font-size: 13px;
+  color: #166534;
+}
+
+.verification-banner p {
+  margin-top: 5px;
+  color: #4b7658;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dfe2e8;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #4263eb;
+  box-shadow: 0 0 0 3px rgba(66, 99, 235, 0.1);
+}
+
+.field-help {
+  color: #8b93a3;
+  font-size: 11px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.preference-section {
+  padding: 20px;
+  background: #f8f9fb;
+  border-radius: 13px;
+}
+
+.preference-section h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.preference-section > p {
+  color: #8b93a3;
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.checkbox-option input {
+  width: 16px;
+  height: 16px;
+}
+
+.register-submit {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #111827;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 25px;
+  color: #737c8c;
+  font-size: 13px;
+}
+
+.login-link a {
+  color: #4263eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .register-container {
+    padding: 28px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

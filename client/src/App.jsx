@@ -1,9 +1,10 @@
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-
-function App() {
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+function Home() {
   return (
     <div className="app">
-      {/* Navigation */}
       <nav className="navbar">
         <div className="logo">
           <span className="logo-icon">🚗</span>
@@ -13,15 +14,21 @@ function App() {
         <div className="nav-links">
           <a href="#how-it-works">How it works</a>
           <a href="#safety">Safety</a>
-          <button className="login-btn">Login</button>
-          <button className="signup-btn">Get Started</button>
+
+          <Link to="/login">
+            <button className="login-btn">Login</button>
+          </Link>
+
+          <Link to="/register">
+            <button className="signup-btn">Get Started</button>
+          </Link>
         </div>
       </nav>
 
-      {/* Hero Section */}
       <main>
         <section className="hero">
           <div className="hero-content">
+
             <div className="verified-badge">
               🔐 CUCHD Student Verified
             </div>
@@ -41,13 +48,19 @@ function App() {
             </p>
 
             <div className="hero-buttons">
-              <button className="primary-btn">
-                🔎 Find a Ride
-              </button>
 
-              <button className="secondary-btn">
-                🚗 Offer a Ride
-              </button>
+              <Link to="/login">
+                <button className="primary-btn">
+                  🔎 Find a Ride
+                </button>
+              </Link>
+
+              <Link to="/login">
+                <button className="secondary-btn">
+                  🚗 Offer a Ride
+                </button>
+              </Link>
+
             </div>
 
             <div className="trust-row">
@@ -66,13 +79,17 @@ function App() {
                 <span>Campus Community</span>
               </div>
             </div>
+
           </div>
 
-          {/* Ride Matching Card */}
           <div className="ride-card">
+
             <div className="card-header">
               <div>
-                <span className="small-label">FIND YOUR RIDE</span>
+                <span className="small-label">
+                  FIND YOUR RIDE
+                </span>
+
                 <h2>Where are you going?</h2>
               </div>
 
@@ -81,6 +98,7 @@ function App() {
 
             <div className="location-input">
               <span className="dot pickup"></span>
+
               <div>
                 <small>Pickup</small>
                 <p>Sector 17, Chandigarh</p>
@@ -91,6 +109,7 @@ function App() {
 
             <div className="location-input">
               <span className="dot destination"></span>
+
               <div>
                 <small>Destination</small>
                 <p>Chandigarh University</p>
@@ -98,6 +117,7 @@ function App() {
             </div>
 
             <div className="ride-options">
+
               <div>
                 <small>DATE</small>
                 <p>📅 Today</p>
@@ -107,26 +127,31 @@ function App() {
                 <small>TIME</small>
                 <p>🕐 8:00 AM</p>
               </div>
+
             </div>
 
-            <button className="search-btn">
-              Find Matching Rides →
-            </button>
+            <Link to="/login">
+              <button className="search-btn">
+                Find Matching Rides →
+              </button>
+            </Link>
 
             <div className="verified-note">
               ✓ Only verified CUCHD students
             </div>
+
           </div>
         </section>
 
-        {/* Features */}
         <section className="features" id="safety">
+
           <div className="section-heading">
             <span>BUILT FOR STUDENTS</span>
             <h2>Travel together. Travel safer.</h2>
           </div>
 
           <div className="feature-grid">
+
             <div className="feature-card">
               <div className="feature-icon">🔐</div>
               <h3>Verified Students</h3>
@@ -140,8 +165,8 @@ function App() {
               <div className="feature-icon">🧠</div>
               <h3>Smart Matching</h3>
               <p>
-                Find rides based on compatible routes, timings and
-                preferences.
+                Find rides based on compatible routes, timings
+                and preferences.
               </p>
             </div>
 
@@ -149,8 +174,8 @@ function App() {
               <div className="feature-icon">🛡️</div>
               <h3>Safety First</h3>
               <p>
-                Ratings, reporting, blocking and safety tools help
-                create a trusted community.
+                Ratings, reporting, blocking and safety tools
+                help create a trusted community.
               </p>
             </div>
 
@@ -158,10 +183,11 @@ function App() {
               <div className="feature-icon">💬</div>
               <h3>Private Chat</h3>
               <p>
-                Communicate inside the platform without immediately
-                sharing personal contact details.
+                Communicate inside the platform without
+                immediately sharing personal contact details.
               </p>
             </div>
+
           </div>
         </section>
       </main>
@@ -175,6 +201,25 @@ function App() {
         <p>Made for the CUCHD student community.</p>
       </footer>
     </div>
+  );
+}
+
+
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
+
+      </Routes>
+      
+    </BrowserRouter>
   );
 }
 
